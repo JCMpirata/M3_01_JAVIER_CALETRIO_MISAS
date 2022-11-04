@@ -13,7 +13,10 @@ class alumno:
         else:
             print("SUSPENDIDO")
 
-if__name__=='__main__':
+if "__name__"=="__main__":
+    alumno1 = alumno()
+    alumno1.__init__()
+    alumno1.calificacion()
     main()
-    print(alumno)
+
 
