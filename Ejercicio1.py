@@ -1,32 +1,28 @@
 from ast import main
-
+import sys
 class alumno:
-    nombre1 = input("Introduzca el nombre del alumn@: ")
-    nota1 = float(input("Introduzca la nota del alumn@: "))
-    nombre2 = input("Introduzca el nombre del alumn@: ")
-    nota2 = float(input("Introduzca la nota del alumn@: "))
-    nombre3 = input("Introduzca el nombre del alumn@: ")
-    nota3 = float(input("Introduzca la nota del alumn@: "))
+    nombre = input("Introduzca el nombre del alumn@: ")
+    nota = float(input("Introduzca la nota del alumn@: "))
+    
 
     def __init__(self):
-        print("Nombre: ", self.nombre1)
-        print("Nota: ", self.nota1)
-        print("Nombre: ", self.nombre2)
-        print("Nota: ", self.nota2)
-        print("Nombre: ", self.nombre3)
-        print("Nota: ", self.nota3)
+        if self.alumno == self.nombre + self.nota:
+            print("El alumno se ha creado correctamente")
+        else:
+            print("El alumno no se ha creado corerrectamente", file = sys.stderr)
     
     def calificacion(self):
-        for self.nota in self.nota1, self.nota2, self.nota3:
-            if self.nota >= 5:
+        for self.resultado in self.nota:
+            if self.resultado >= 5:
                 print("APROBADO")
             else:
                 print("SUSPENDIDO")
 
+
 if "__name__"=="__main__":
     alumno1 = alumno()
-    alumno1.__init__()
-    alumno1.calificacion()
+    alumno2 = alumno()
+    alumno3 = alumno()
     main()
     
 
