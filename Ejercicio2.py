@@ -1,10 +1,17 @@
 from ast import main
+import sys
 
 class alumno:
+
+    nombre = input("Introduzca el nombre del alumno: ")
+    nota = float("Introduzca la nota del alumno: ")
     
-    def __init__(self, alumno, nota):
-        self.alumno = alumno
-        self.nota = float(nota)
+    def __init__(self):
+        if self.alumno == self.nombre + self.nota:
+            print("El alumno se ha creado correctamente")
+        else:
+            print("El alumno no se ha creado correctamente", file = sys.stderr)
+        
 
     def calificacion(self):
         for self.resultado in self.nota:
@@ -14,17 +21,13 @@ class alumno:
                 ("SUSPENDIDO")
 
     def __str__(self):
-        cadena = "El alumno" + self.alumno + "ha sacado" + self.nota
+        cadena = "El alumno" + self.alumno + "ha sacado" + self.nota + "por lo que ha " + calificacion()
         return cadena
 
 
 if "__name__"=="__main__":
-    alumno1 = alumno("Javier", 6.5)
-    alumno2 = alumno("Pablo", 4.75)
-    alumno3 = alumno("Adrian", 8.2)
-
-    print(alumno1)
-    print(alumno2)
-    print(alumno3)
+    alumno1 = alumno()
+    alumno2 = alumno()
+    alumno3 = alumno()
     main()
     
