@@ -7,6 +7,7 @@ class alumno:
     def __init__(self, nombre, nota):
         self.nombre = nombre
         self.nota = nota
+
         if self.alumno == self.nombre + self.nota:
             print("El alumno se ha creado correctamente")
         else:
@@ -14,20 +15,29 @@ class alumno:
         
 
     def calificacion(self):
-        for self.resultado in self.nota:
-            if self.resultado >= 5:
-                print("APROBADO")
+        
+            if self.nota >= 5:
+                return True
             else:
-                ("SUSPENDIDO")
+                return False
 
     def __str__(self):
-        cadena = "El alumno" + self.alumno + "ha sacado" + self.nota + "por lo que ha " + calificacion()
-        return cadena
+        return "El alumno {} ha sacado un {}".format(self.nombre, self.nota)
 
 
 if "__name__"=="__main__":
     alumno1 = alumno("Pablo", 6.5)
+    print(alumno1)
     alumno2 = alumno("Daniel", 3.4)
+    print(alumno2)
     alumno3 = alumno("Adrian", 7,75)
+    print(alumno3)
+
+    calificacion = alumno.calificacion
+    if calificacion >= 5:
+        print("Aprobado")
+    else:
+        print("SUSPENSO")
+
     main()
     
