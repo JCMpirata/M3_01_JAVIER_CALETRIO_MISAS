@@ -1,10 +1,12 @@
+# Ejercicio 2
+
 from ast import main
 import sys
 
 class alumno:
 
     nombre = input("Introduzca el nombre del alumno: ")
-    nota = float("Introduzca la nota del alumno: ")
+    nota = float(input("Introduzca la nota del alumno: "))
     
     def __init__(self):
         if self.alumno == self.nombre + self.nota:
