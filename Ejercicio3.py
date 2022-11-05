@@ -3,24 +3,27 @@
 from ast import main
 import sys
 class Producto:
-    codigo = int("Introduzca el codigo del producto: ")
-    nombre = input("Introduzca el producto: ")
-    precio = float("Introduzca el precio: ")
-    tipo = input("Introduzca el tipo: ")
 
-    def __init__(self):
+    def __init__(self, nombre, tipo, codigo, precio):
+        self.nombre = nombre
+        self.tipo = tipo
+        self.codigo = codigo
+        self.precio = precio
+
         if self.producto == self.codigo + self.nombre + self.precio + self.tipo:
             print("El producto es correcto")
         else:
             print("No existe ningun producto", file = sys.stderr)
 
     def __str__(self):
-        cadena = "El producto " + self.nombre + "del tipo " + self.tipo + "y con el codigo " + self.codigo + "cuesta " + self.precio + "€"
-        return cadena
+        return "El producto {} del tipo {} y con codigo {} tiene un precio de {} €".format(self.nombre, self.tipo, self.codigo, self.precio)
 
 if "__name__"=="__main__":
-    producto1 = Producto()
-    producto1.__init()
-    producto1.__str__()
+    producto1 = Producto("Audi e-tron", "Automovil", 12345, 108500)
+    print(producto1)
+    producto2 = Producto("Mercedes Eqs", "Automovil", 623548, 112650)
+    print(producto2)
+    producto3 = Producto("BMW i8", "Automovil", 375458, 104760)
+    print(producto3)
 
     main()
