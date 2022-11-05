@@ -3,11 +3,9 @@
 from ast import main
 import sys
 class alumno:
-    nombre = input("Introduzca el nombre del alumn@: ")
-    nota = float(input("Introduzca la nota del alumn@: "))
-    
-
-    def __init__(self):
+    def __init__(self, nombre, nota):
+        self.nombre = nombre
+        self.nota = nota
         if self.alumno == self.nombre + self.nota:
             print("El alumno se ha creado correctamente")
         else:
@@ -22,9 +20,13 @@ class alumno:
 
 
 if "__name__"=="__main__":
-    alumno1 = alumno()
-    alumno2 = alumno()
-    alumno3 = alumno()
+    alumno1 = alumno("Pablo", 5.6)
+    alumno2 = alumno("Daniel", 3.4)
+    alumno3 = alumno("Adrian", 6.75)
+
+    print(alumno1)
+    print(alumno2)
+    print(alumno3)
     main()
     
 
